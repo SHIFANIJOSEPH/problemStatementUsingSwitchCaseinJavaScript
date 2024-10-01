@@ -1,0 +1,35 @@
+console.log("1-pizza:800 2-burger:300 3-briyani:250 4-apple juice:100 5-idli:80");
+let input=prompt("enter your choice:");
+let quantity=prompt("Enter the number of quantity");
+function calculatePrize(input ,quantity){
+    let price=0;
+switch(input){
+    case '1':
+        price= 800*quantity;
+        break;
+    case '2':
+        price= 300*quantity;
+        break;
+    case '3':
+        price= 250*quantity;
+        break;
+    case '4':
+        price=100*quantity;
+        break;
+    case '5':
+        price= 80*quantity;
+        break;
+    default:
+        return "invalid input";
+}
+    if(price>500){
+        let dis=(price*10)/100;
+        price=price-dis;
+    }
+   return price;
+}
+console.log(calculatePrize(input ,quantity));
+
+
+
+
